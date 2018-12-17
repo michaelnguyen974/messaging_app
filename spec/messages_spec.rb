@@ -6,4 +6,12 @@ feature "#Header" do
     visit '/'
     expect(page).to have_text("Messaging app")
   end 
-end 
+end
+
+feature "#Form" do
+  scenario "User fills out form" do
+  visit '/'
+  fill_in 'input_message', with: 'Michael'
+  click_button 'Submit'
+  end
+end
