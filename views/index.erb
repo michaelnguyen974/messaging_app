@@ -1,10 +1,14 @@
+<center>
 <h1>Messaging app</h1>
 <form action="/messages" method="post">
 <div>
-<textarea cols="50" row="5" name="input_message" placeholder="insert message here">
+<textarea cols="50" row="5" name="content" placeholder="insert message here">
 </textarea>
+<br>
 <input type="submit" value="Submit">
 </div>
 </form>
-
-<%= @message1.content unless @message1.nil? %>
+<% @messages.reverse.each do |message| %>
+<%= message.content%> ->>>>>>>>> <%= message.time%><br>
+<% end %>
+</center>

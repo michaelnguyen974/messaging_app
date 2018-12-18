@@ -11,7 +11,7 @@ end
 feature "#Form" do
   scenario "User fills out form" do
   visit '/'
-  fill_in 'input_message', with: 'Michael'
+  fill_in 'content', with: 'Michael'
   click_button 'Submit'
   end
 end
@@ -19,11 +19,11 @@ end
 feature "#storing messages" do
   scenario "check whether messages are being stored" do
     visit "/"
-    fill_in 'input_message', with: "Michael"
+    fill_in 'content', with: "Michael"
     click_button "Submit"
     expect(page).to have_text("Michael")
     visit "/"
-    fill_in 'input_message', with: "Tom"
+    fill_in 'content', with: "Tom"
     click_button "Submit"
     expect(page).to have_text("Michael")
     expect(page).to have_text("Tom")
