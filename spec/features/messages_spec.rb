@@ -1,7 +1,7 @@
 require 'capybara/rspec'
 require './app.rb'
 
-feature "" do 
+feature "#" do 
   scenario "" do 
     visit('/')
     fill_in 'input_message', with: "Michael"
@@ -9,3 +9,5 @@ feature "" do
     expect(page).to have_text("Michael")
   end 
 end 
+
+
