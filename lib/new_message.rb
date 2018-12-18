@@ -3,7 +3,7 @@ class New_message
  
    def initialize(content)
      @content = content
-     @time = Time.now.strftime("%d-%m-%Y %H:%M:%S")
+     @time = Time.now.strftime("%d-%m-%Y %H:%M:%S:%P")
    end
 
 end 
