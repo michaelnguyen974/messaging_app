@@ -1,9 +1,10 @@
-class Message_list
-  attr_reader :content
+class New_message
+  attr_reader :content, :time
  
    def initialize(input_name)
      @content = []
      @content << input_name
+     @time = Time.now
    end
 
   #  def list(input_name)

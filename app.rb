@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/message_list.rb'
+require './lib/new_message.rb'
 class Messages < Sinatra::Base
 enable :sessions
   
@@ -9,9 +9,14 @@ enable :sessions
   end
 
   post '/messages' do
-    session[:messages] = Message_list.new(params[:input_message])
+    session[:messages] = New_message.new(params[:input_message])
+    
     redirect '/'
   end
 
 run! if app_file == $0
 end
+
+
+
+
