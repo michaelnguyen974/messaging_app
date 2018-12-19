@@ -9,6 +9,6 @@
 </div>
 </form>
 <% @messages.reverse.each do |message| %>
-<a href=""><%= message.preview %></a> ->>>>>>>>> <%= message.time%><br> 
+<a href="/messages/<%= message.id%>"><%= message.preview %></a> ->>>>>>>>> <%= message.time%><br> 
 <% end %> 
 </center>

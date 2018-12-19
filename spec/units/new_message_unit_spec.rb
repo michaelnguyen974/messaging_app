@@ -31,4 +31,13 @@ RSpec.describe New_message do
       expect(first_message.preview).to eq "abcdefghijklmnopqrst"
     end 
   end
+
+  #Current unit test
+  describe "#looks for id" do 
+    it "shows the id of the message" do 
+      first_message = New_message.new("abcdefghijklmnopqrstuvwxyz", 1)
+      expect(first_message.id).to eq 1
+    end 
+  end 
+
 end 

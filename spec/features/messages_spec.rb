@@ -22,7 +22,7 @@ feature 'checks for the first 20 characters' do
 end 
 
 feature '#checks if there is a link' do 
-  scenario '' do
+  scenario 'looks for link' do
     visit ('/')
     fill_in 'content', with: "abcdefghijklmnopqrstuvwxyz"
     click_button "Submit"
@@ -30,6 +30,16 @@ feature '#checks if there is a link' do
   end 
 end 
 
+#Current feature test that expects the next page to have the full content
+feature "#checks link" do 
+  scenario 'checks if clicking the link gives us the whole message' do 
+    visit ('/')
+    fill_in 'content', with: "abcdefghijklmnopqrstuvwxyz"
+    click_button "Submit"
+    click_link('abcdefghijklmnopqrst')
+    expect(page).to have_content "abcdefghijklmnopqrstuvwxyz"
+  end 
+end 
 
 
 
