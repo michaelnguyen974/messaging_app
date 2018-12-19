@@ -21,8 +21,11 @@ enable :sessions
   end
 
   get '/messages/:id' do 
-    @store = session[:messages]
-    @id = params[:id].to_i
+    store = session[:messages]
+    id = params[:id].to_i
+    store.each do |individual_message|
+      @message = individual_message.content if individual_message.id == id 
+    end
     erb :messages
   end 
 
