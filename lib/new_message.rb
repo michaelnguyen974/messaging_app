@@ -6,4 +6,8 @@ class New_message
      @time = Time.now.strftime("%d-%m-%Y %H:%M:%S:%P")
    end
 
+   def preview
+      @content[0...20]
+   end 
+
 end 

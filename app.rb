@@ -11,7 +11,7 @@ enable :sessions
 
   post '/messages' do
     message = New_message.new(params[:content])
-    session[:messages] << message
+    p session[:messages] << message
     redirect '/'
   end
 
