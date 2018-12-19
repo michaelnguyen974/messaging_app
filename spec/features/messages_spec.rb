@@ -21,6 +21,15 @@ feature 'checks for the first 20 characters' do
   end 
 end 
 
+feature '#checks if there is a link' do 
+  scenario '' do
+    visit ('/')
+    fill_in 'content', with: "abcdefghijklmnopqrstuvwxyz"
+    click_button "Submit"
+    click_link('abcdefghijklmnopqrst')
+  end 
+end 
+
 
 
 
