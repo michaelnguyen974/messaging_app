@@ -1,4 +1,4 @@
-# ENV['RACK_ENV'] = 'development'
+
 require 'sinatra/base'
 require './lib/new_message.rb'
 require './config/data_mapper'
@@ -6,7 +6,7 @@ require './config/data_mapper'
 
 class Messages < Sinatra::Base
 enable :sessions
-  
+ENV['RACK_ENV'] ||= 'development'
   get '/' do
     @messages = New_message.all
 

@@ -16,6 +16,7 @@ gem 'capybara'
 gem 'dm-postgres-adapter'
 
 gem 'data_mapper'
+gem 'pry'
 
 
 
