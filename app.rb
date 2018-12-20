@@ -1,3 +1,4 @@
+# ENV['RACK_ENV'] = 'development'
 require 'sinatra/base'
 require './lib/new_message.rb'
 require './config/data_mapper'
@@ -6,10 +7,6 @@ require './config/data_mapper'
 class Messages < Sinatra::Base
 enable :sessions
   
-  # before do 
-  #   session[:id] ||= 1
-  # end 
-
   get '/' do
     @messages = New_message.all
 
@@ -29,6 +26,3 @@ enable :sessions
 run! if app_file == $0
 end
 
-
-
-# @message = New_message.get(params[:id])
