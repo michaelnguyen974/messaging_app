@@ -1,31 +1,28 @@
 require 'sinatra/base'
 require './lib/new_message.rb'
+require './config/data_mapper'
+
+
 class Messages < Sinatra::Base
 enable :sessions
   
-  before do 
-    session[:id] ||= 1
-  end 
+  # before do 
+  #   session[:id] ||= 1
+  # end 
 
   get '/' do
-    session[:messages] ||= []
-    @messages = session[:messages]
+    @messages = New_message.all
+
     erb :index
   end
 
   post '/messages' do
-    message = New_message.new(params[:content], session[:id])
-    session[:messages] << message
-    session[:id] += 1
+   New_message.create(content: params[:content])
     redirect '/'
   end
 
   get '/messages/:id' do 
-    store = session[:messages]
-    id = params[:id].to_i
-    store.each do |individual_message|
-      @message = individual_message.content if individual_message.id == id 
-    end
+    @message = New_message.get(params[:id])
     erb :messages
   end 
 
@@ -34,4 +31,4 @@ end
 
 
 
-
+# @message = New_message.get(params[:id])

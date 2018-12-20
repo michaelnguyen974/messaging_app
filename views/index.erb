@@ -8,7 +8,8 @@
 <input type="submit" value="Submit">
 </div>
 </form>
+
 <% @messages.reverse.each do |message| %>
-<a href="/messages/<%= message.id%>"><%= message.preview %></a> ->>>>>>>>> <%= message.time%><br> 
+<a href="/messages/<%= message.id%>"><%= message.content[0...20] %></a> ->>>>>>>>> <%= message.created_at%><br> 
 <% end %> 
 </center>
