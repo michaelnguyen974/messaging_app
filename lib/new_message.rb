@@ -5,10 +5,10 @@ class New_message
 
   property :id,       Serial
   property :content,  Text
-  property :created_at,     DateTime  
+  property :created_at,  DateTime  
 
-  # def preview
-  #   @content[0...20]
-  # end 
+  def preview
+    content[0...20]
+  end 
 
 end 
