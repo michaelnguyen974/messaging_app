@@ -18,5 +18,6 @@ gem 'dm-postgres-adapter'
 gem 'data_mapper'
 gem 'pry'
 
+gem 'simplecov', '~> 0.16.1', require: false
 
 

@@ -31,3 +31,25 @@ feature "#storing messages" do
   end
 end
 
+feature "#Delete" do 
+  scenario 'delete button' do 
+    visit '/'
+    fill_in 'content', with: "Hello I am going to delete a message"
+    click_button "Submit"
+    expect(page).to have_content "delete"
+  end 
+
+  # scenario 'deleting a message' do 
+
+  # end 
+end 
+
+feature "#Editing messages" do 
+  scenario 'checks for delete button' do 
+    visit '/'
+    fill_in 'content', with: "Hello I am going to delete a message"
+    click_button "Submit"
+    expect(page).to have_content "edit"
+  end 
+end 
+

@@ -1,3 +1,8 @@
+<head>
+  <title>Messaging app yee</title>
+  <link rel='stylesheet' type='text/css' href="<%= url('/css/styling.css')%>" ></link>
+</head>
+
 <center>
 <h1>Messaging app</h1>
 <form action="/messages" method="post">
@@ -9,7 +14,14 @@
 </div>
 </form>
 
+
+
 <% @messages.reverse.each do |message| %>
 <a href="/messages/<%= message.id%>"><%= message.preview %></a> ->>>>>>>>> <%= message.created_at%><br> 
-<% end %> 
+ <form action='/messages/<%= message.id %>' method='POST' class='pull-center'>
+    <input type='hidden' name='_method' value='DELETE'/>
+    <button type='submit' class='super-sport'>delete</button>
+  </form> 
+<% end %>
+
 </center>

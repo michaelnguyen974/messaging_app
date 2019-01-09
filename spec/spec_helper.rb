@@ -1,4 +1,5 @@
 ENV['RACK_ENV'] = 'test'
+require 'simplecov'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
@@ -7,6 +8,11 @@ require 'rspec'
 
 Capybara.app = Messages
 
+# SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new([
+#   SimpleCov::Formatter::HTMLFormatter,
+#   SimpleCov::Formatter::CSVFormatter,
+# ])
+# SimpleCov.start
 
 
 
