@@ -13,24 +13,29 @@ User sees the home page at the index where it has
 A heading
 A form
 All the messages with a timestamp in reverse chronological order.
-
+```
+```
 As a user, 
 I want to be able to create a message.
-
+```
+```
 As a user, 
 I want to be able to view the message on the home page as a clickable link, with the first 20 characters shown.
-
+```
+```
 As a User, 
 I want to be able to visit a specific note, see it on the page. 
-
+```
+```
 As a User, 
 I want to be able to see an edit button
 which I can click on that shows me a form which I can use to update the text of that message.
 once submitted, the app redirects back to the index and shows the updated message text.
-
+```
+```
 As a User, 
 I want to see a delete button
 which I can click on that deletes that message
 and then redirects back to the index.
-
+```
 
