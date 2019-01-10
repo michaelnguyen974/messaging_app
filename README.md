@@ -1,7 +1,7 @@
 # Messaging app
 
 ## Instructions 
-Creqating a fully functioning messaging app where we can create, read, update and delete messages using Sinatra library with Capybara/Rspec testing. The messaging app will follow the idea of CRUD (which are the four basic functions of persistent storage).
+Created a fully functioning messaging app where you can create, read, update and delete messages using Sinatra library with Capybara/Rspec testing. The messaging app will follow the idea of CRUD (which are the four basic functions of persistent storage).
 
 ## Part 1
 Database creation using PostgresSQL
